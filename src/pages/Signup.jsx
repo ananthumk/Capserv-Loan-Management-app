@@ -67,7 +67,7 @@ const Signup = () => {
   };
 
   return (
-    <div className={`flex min-h-screen  items-center justify-center px-4 ${
+    <div className={`flex min-h-screen  items-center justify-center py-5 px-4 ${
       lightTheme ? "bg-slate-50" : "bg-slate-950"
     }`}>
       <div className={`w-full max-w-md rounded-xl border p-6 shadow-lg ${

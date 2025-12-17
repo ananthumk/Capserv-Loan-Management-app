@@ -4,11 +4,12 @@ const LoanTable = ({ loans }) => {
   const { lightTheme } = useAuth();
 
   return (
-    <div className={`overflow-x-auto rounded-lg border ${
+    <div className={`rounded-lg border overflow-hidden ${
       lightTheme
         ? "border-slate-300 bg-white"
         : "border-slate-800 bg-slate-900/70"
     }`}>
+      <div className="overflow-x-auto">
       <table className="min-w-full text-left text-sm">
         <thead className={lightTheme ? "bg-slate-100" : "bg-slate-900"}>
           <tr>
@@ -93,6 +94,7 @@ const LoanTable = ({ loans }) => {
           )}
         </tbody>
       </table>
+      </div>
     </div>
   );
 };
