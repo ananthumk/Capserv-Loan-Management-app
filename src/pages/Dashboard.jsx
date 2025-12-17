@@ -18,7 +18,7 @@ const Dashboard = () => {
     setLoans(storedLoans);
   }, []);
 
-  // filtered loans without useMemo
+  
   const filteredLoans = loans.filter((loan) => {
     const matchesSearch = loan.customerName
       .toLowerCase()
@@ -32,7 +32,7 @@ const Dashboard = () => {
     return matchesSearch && matchesStatus && matchesType;
   });
 
-  // unique types without useMemo
+ 
   const uniqueTypes = ["All", ...new Set(loans.map((l) => l.type))];
 
   return (
@@ -44,9 +44,9 @@ const Dashboard = () => {
       <Sidebar />
       <div className="flex flex-1 flex-col w-full">
         <Navbar />
-        <main className="flex-1 overflow-auto">
+        <div className="flex-1 overflow-auto">
           <div className="mx-auto max-w-6xl px-4 py-6">
-            <section className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <h2
                 className={`text-2xl sm:hidden font-semibold ${
                   lightTheme ? "text-slate-900" : "text-slate-100"
@@ -81,9 +81,9 @@ const Dashboard = () => {
                   <span className="font-semibold">{currentUser.email}</span>
                 </p>
               )}
-            </section>
+            </div>
 
-            <section
+            <div
               className={`mb-5 grid gap-4 rounded-xl border p-4 md:grid-cols-3 ${
                 lightTheme
                   ? "border-slate-300 bg-white/80"
@@ -148,11 +148,11 @@ const Dashboard = () => {
                   ))}
                 </select>
               </div>
-            </section>
+            </div>
 
             <LoanTable loans={filteredLoans} />
           </div>
-        </main>
+        </div>
       </div>
     </div>
   );

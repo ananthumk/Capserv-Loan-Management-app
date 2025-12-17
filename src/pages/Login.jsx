@@ -10,7 +10,7 @@ const Login = () => {
   const navigate = useNavigate();
   const { login, lightTheme } = useAuth();
 
-  const [step, setStep] = useState("CREDENTIALS"); // or "OTP"
+  const [step, setStep] = useState("CREDENTIALS");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [otpInput, setOtpInput] = useState("");

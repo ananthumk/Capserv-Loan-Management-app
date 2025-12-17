@@ -28,7 +28,7 @@ const Sidebar = () => {
               Loan Dashboard
             </h2>
           </div>
-          <nav className="px-4">
+          <div className="px-4">
             <ul className="space-y-2">
               <li>
                 <Link
@@ -55,7 +55,7 @@ const Sidebar = () => {
                 </Link>
               </li>
             </ul>
-          </nav>
+          </div>
         </div>
         <div className={`border-t px-4 py-4 ${
           lightTheme ? "border-slate-200" : "border-slate-700"
