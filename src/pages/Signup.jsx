@@ -45,7 +45,7 @@ const Signup = () => {
       return;
     }
   
-    if (phone.length > 10){
+    if (phone.length !== 10){
       toast.error("Invalid phone number")
       return;
     }
